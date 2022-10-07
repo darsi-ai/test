@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ron Hicks</title>
+
+    <style>
+        body {
+            background-color: #F0EBE3;
+        }
+
+        h1 {
+            text-align: center;
+            color: #495C83;
+            margin: 0 auto;
+            font-size: 36px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #495C83;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 80%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 4px solid #495C83;
+        }
+
+        p {
+            text-align: center;
+            color: #495C83;
+            font-weight: 200;
+            line-height: normal;
+        }
+
+        a {
+            text-decoration: none;
+            color: #7A86B6;
+        }
+
+        a:hover {
+            color: #A8A4CE;
+            text-decoration: underline;
+        }
+
+        span{
+            display: block;
+            margin: 0 auto;
+            color: #495C83;
+            text-align: center;
+            padding: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            color: #fff;
+            background-color: #495C83;
+            padding: 15px;
+            border: 1px solid #495C83;
+            border-radius: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 200ms ease-in-out;
+            box-shadow: rgb(37 39 89 / 5%) 0px 8px;
+        }
+
+        button:hover {
+            color: #495C83;
+            background-color: #F0EBE3;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 250px;
+            margin: 0 auto;
+            padding: 30px;
+            background-image: linear-gradient(360deg, #F0EBE3, #7D9D9C);
+            border: 1px solid #7D9D9C;
+            border-radius: 15px;
+        }
+        
+        .upper-line {
+            background-color: #A8A4CE;
+            max-width: 300px;
+        }
+
+        .lower-line{
+            background-color: #7D9D9C;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ron Hicks</h1>
+        <hr class="upper-line"/>
+        <h2>American Artist</h2>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/041/777/original/d7d2fb4b8515483813f1a92f1c77793f.jpg?1658841418"
+            alt="John Hicks's painting of women">
+
+        <p>
+            Ohio-born <strong>Ron Hicks</strong> is a mid-career, American painter with a long string of exhibitions to his name. His
+            subject is the figure and the medium is oil. His mature style exploits to the full the aesthetic pleasures
+            of his technique. He relishes the possibilities and outcomes offered by emphatic handling, graphic
+            composition and textural manipulation.
+        <hr class="lower-line"/>
+        <a href="https://albemarlegallery.com/artists/68-ron-hicks/biography/" target="_blank">Full
+            biography</a>;
+        <a href="https://www.artsy.net/artist/ron-hicks" target="_blank">More works here</a>
+        </p>
+        <span><em> We are waiting for your order!</em></span>
+        <button>Order now!</button>
+
+        <p>Coded by <a href="https://www.instagram.com/d.o1.r/" target="_blank">Dariia Sokolovska</a></p>
+    </div>
+
+    <script>
+        function updateHeading(newHeading) {
+                let heading = document.querySelector("span");
+                heading.innerHTML = newHeading;
+            }
+
+            function buy() {
+                let name = prompt("What is your name?");
+                let email = prompt("What is your email");
+                if (name.length && email.length > 0){
+                    updateHeading(`Thank you ${name}, we will be in touch by email!`);
+            }else{
+                alert("Please fulfill your name and email for order.")
+            }
+        }
+
+            let contactButton = document.querySelector("button");
+            contactButton.addEventListener("click", buy);
+    </script>
+</body>
+
+</html>
